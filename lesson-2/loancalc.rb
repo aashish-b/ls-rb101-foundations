@@ -89,6 +89,7 @@ loop do
   run_again = gets.chomp
   break unless run_again.downcase == 'y'
 end
+
 # issues
 # 1. didn't initialize float value variable outside the
 #    method so program stopped.
