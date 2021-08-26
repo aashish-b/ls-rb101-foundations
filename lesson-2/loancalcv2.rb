@@ -106,3 +106,4 @@ end
 # 4. UNSOLVED - YAML can't call on variables;
 # all solutions direct to Rails methods. not sure.//
 # 5. UNSOLVED - How do you remember user's name during 2nd interation?
+ 
