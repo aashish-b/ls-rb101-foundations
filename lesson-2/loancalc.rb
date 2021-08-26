@@ -100,4 +100,4 @@ end
 # 3. UNSOLVED - how to use commas for numbers?
 #    more natural but no idea how.
 # 4. UNSOLVED - YAML can't call on variables;
-#    all solutions direct to Rails methods. not sure. 
+#    all solutions direct to Rails methods. not sure.
