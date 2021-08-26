@@ -71,9 +71,11 @@ loop do
   if aprate_real == 0
     puts "Your interest rate is 0 so your monthly payment will be
           $#{zerointerest} per month (in USD)."
-    break
+    prompt("Do you want to use LoanCalc again, #{givenname}? ('y' for yes)")
+    run_again = gets.chomp
+    break unless run_again.downcase == 'y'
   end
-
+ 
   clear_screen
 
   monthly_ir = aprate_real / 12 / 100
