@@ -75,7 +75,7 @@ loop do
     run_again = gets.chomp
     break unless run_again.downcase == 'y'
   end
- 
+
   clear_screen
 
   monthly_ir = aprate_real / 12 / 100
@@ -100,4 +100,4 @@ end
 # 3. UNSOLVED - how to use commas for numbers?
 #    more natural but no idea how.
 # 4. UNSOLVED - YAML can't call on variables;
-#    all solutions direct to Rails methods. not sure.
+#    all solutions direct to Rails methods. not sure. 
