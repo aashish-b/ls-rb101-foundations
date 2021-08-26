@@ -84,14 +84,11 @@ loop do
                 (1 -
                 (1 + monthly_ir)**(-loan_durreal)))
   monthly_pmt_final = to_float(monthly_pmt)
-
   prompt("Your monthly payment is $#{monthly_pmt_final} per month (in USD $).")
-
   prompt("Do you want to use LoanCalc again, #{givenname}? ('y' for yes)")
   run_again = gets.chomp
   break unless run_again.downcase == 'y'
 end
-
 # issues
 # 1. didn't initialize float value variable outside the
 #    method so program stopped.
