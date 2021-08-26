@@ -99,4 +99,4 @@ end
 #    more natural but no idea how.
 # 4. UNSOLVED - YAML can't call on variables;
 #    all solutions direct to Rails methods. not sure.
-
+ 
