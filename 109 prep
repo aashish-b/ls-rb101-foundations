@@ -24,6 +24,8 @@ error:  comparison of string with nil failed.
 
 AFTER 2 FAILED APPROACHES:
 
+# approach failed because you didn't compare algorithm with test cases CAREFULLY. look at the last one 
+
 - example: 12222569999
 So if you have a range from this number to the biggest number that  can be created by this collection of digits
 (12222569999..99996522221)
@@ -71,7 +73,7 @@ def next_number(num)
     end
   end
 end
-# approach failed because you didn't compare algorithm with test cases CAREFULLY. look at the last one 
+
 
 
 p next_number(12) # 21
