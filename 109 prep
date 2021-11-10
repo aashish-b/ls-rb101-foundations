@@ -1,0 +1,80 @@
+=begin
+
+10:15
+
+every integer here has a point where the digit after the current one is HIGHER. this is the place
+where we can switch positions of the digits to create a bigger number.
+
+for example, 432789
+  the next biggest number using these digits is 437289. 7 and 2 are switched.
+- this is what your program has to do.
+
+you can create an array of digits. 
+iterate on this array using an index.
+as soon as you encounter a number higher than the current one, parallel assign the two elements to each other SO  THEY SWITCH.
+join the final integer and return it.
+
+
+you forgot that digits is a method that sorts the array. you have to preserve the order.
+so this doesn't work.
+let's try to  use strings, and the same logic, but just with conversions
+
+FAILED.
+error:  comparison of string with nil failed.
+
+AFTER 2 FAILED APPROACHES:
+
+- example: 12222569999
+So if you have a range from this number to the biggest number that  can be created by this collection of digits
+(12222569999..99996522221)
+  - how do you get the biggest number?
+    - sort by digits and join the reverse.
+You want to sort that array, and get the first element which contains ALL of the digits from the input number
+and it is not equal to the input number itself
+so for example (12..21), the first number that contains both 1 and 2 is 21. 
+  - how do you check for this??
+    - does  the number have ALL the digits from num? match  both digits arrays?
+
+10:38
+=end
+
+# def next_number(num)
+#   arr = num.digits
+#   arr.each_with_index do |num, index|
+#     if num < arr[index + 1]
+#       arr[index], arr[index + 1] = arr[index + 1], arr[index]
+#     end
+#   end
+#   arr
+FAILED
+# end
+
+# def next_number(num)
+#   str = num.to_s
+#   arr = str.chars 
+#   arr.each_with_index do |char, index|
+#     if char.to_i < arr[index + 1].to_i
+#       arr[index], arr[index + 1] = arr[index + 1], arr[index]
+#     end
+#   end
+#   arr.join.to_i
+FAILED
+# end
+
+def next_number(num)
+  largest_num = num.digits.sort.reverse.join.to_i
+  (num..largest_num).each do |number|
+    if number.digits.sort == num.digits.sort && number != num
+      return number
+    else
+      -1
+    end
+  end
+end
+# approach failed because you didn't compare algorithm with test cases CAREFULLY. look at the last one 
+
+
+p next_number(12) # 21
+p next_number(513) # 531
+p next_number(123456789) # 123456798
+p next_number(12222569999) # 1222659999
