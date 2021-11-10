@@ -6,7 +6,7 @@ every integer here has a point where the digit after the current one is HIGHER. 
 where we can switch positions of the digits to create a bigger number.
 
 for example, 432789
-  the next biggest number using these digits is 437289. 7 and 2 are switched.
+  the next biggest number using these digits is 437289. 7 and 2 are switched. * wrong. the next highest is 437298
 - this is what your program has to do.
 
 you can create an array of digits. 
